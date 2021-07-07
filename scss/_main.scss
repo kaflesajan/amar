@@ -1,0 +1,445 @@
+*
+{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #616161;
+    line-height: 1.5;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+img 
+{
+    display: block;
+}
+.container
+{
+    max-width: 1170px;
+    margin: auto;
+}
+:focus
+{
+    outline: none;
+}
+::placeholder
+{
+    color: #999;
+}
+::selection
+{
+    background: $g;
+    color: $w;
+}
+a
+{
+    text-decoration: none;
+}
+ul 
+{
+    list-style: none;
+}
+.flex 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header 
+{
+    background: $g;
+    padding: 15px 0;
+    transition: all 0.5s ease 0s;
+    .header
+    {
+        @extend .flex;
+        font-size: 24px;
+        .logo 
+        {
+            img 
+            {
+                width: 265px;
+                height: 65px;
+            }
+        }
+        a
+        {
+            color: $w;
+        }
+    }
+}
+
+.abc
+{
+    background-color: rgba($color: #000000, $alpha: 0.1);
+}
+
+nav 
+{
+    background: $brand;
+    ul 
+    {
+        li 
+        {
+            display: inline-block;
+            a 
+            {
+                display: block;
+                color: $w;
+                padding: 20px;
+                &:hover 
+                {
+                    @extend .abc;
+                }
+            }
+        }
+    }
+    .active 
+    {
+        a 
+        {
+           @extend .abc;
+        }
+    }
+}
+
+.banner
+{
+    background: url(../img/search-cover.jpg);
+    padding: 50px 0;
+    text-align: center;
+    color: $w;
+    h2 
+    {
+        font-size: 30px;
+        padding: 15px 0;
+        font-weight: normal;
+    }
+    input 
+    {
+        width: 60%;
+        height: 45px;
+        margin: 15px 0;
+        padding-left: 15px;
+    }
+    button 
+    {
+        background: $o;
+        padding: 15px;
+        border: none;
+        color: $w;
+    }
+}
+
+.home-title 
+{
+    position: relative;
+    h1 
+    {
+    font-size: 34px;
+    margin-top: 10px;
+    color: $brand;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: normal;
+    }
+    &:before 
+    {
+    background-color: transparent;
+    border-left: 2px solid $o;
+    border-top: 2px solid $o;
+    content: "";
+    display: inline-block;
+    height: 23px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 25px;
+    }
+}
+.offer
+{
+    padding: 50px 0;
+    .offer-details
+    {
+        @extend .flex;
+        img 
+        {
+            width: 100%;
+        }
+        .offer-box
+        {
+            flex-basis: 48%;
+            margin: 25px 0;
+            position: relative;
+            .offer-content 
+            {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: rgba($color: #000000, $alpha: 0.6);
+                width: 100%;
+                padding: 50px;
+                color: $w;
+                h2
+                {
+                    font-size: 30px;
+                    line-height: 1.2;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                }
+                .details
+                {
+                    background: $o;
+                    padding: 6px 35px;
+                    border-radius: 25px;
+                    color: $w;
+                    text-decoration: none;
+                    display: inline-block;
+                    margin-top: 15px;
+                }
+            }
+        }
+        
+    }
+}
+
+.grey
+{
+    background-color: #F1F1F1;
+    padding: 50px 0;
+}
+.white
+{
+    background-color: #fff;
+    padding: 50px 0;
+}
+.btn
+{
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-block;
+}
+.trip
+{
+    margin: 25px 0;
+    flex-basis: 32%;
+    box-shadow: 0px 0px 5px #ccc;
+    .trip-header
+    {
+        position: relative;
+        img 
+        {
+            width: 100%;
+            height: 100%;
+        }
+        .trip-content
+        {
+            position: absolute; bottom: 0; left: 0;
+            width: 100%; padding: 20px; color: $w;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            font-size: 18px;
+        }
+        .price 
+        {
+            position:absolute; top: 20px; left: 0;
+            padding: 15px; color: $w; background-color: $o;
+        }
+    }
+    .trip-body
+    {
+        background: $w;
+        padding: 25px;
+        .price 
+        {
+            color: $o; font-size: 23px;
+            span 
+            {
+                display: block; font-size: 16px;
+                color: $brand;
+            }
+        }
+    }
+}
+
+.wrap 
+{
+    flex-wrap: wrap;
+}
+
+.asia
+{
+    flex-basis: 48%;
+    background: $w;
+    box-shadow: 0px 0px 4px #ccc;
+    margin: 25px 0;
+    .img 
+    {
+        flex-basis: 50%;
+        img 
+        {
+            width: 100%;
+        }
+    }
+    .content 
+    {
+        flex-basis: 50%;
+        padding-left: 20px;
+    }
+}
+
+.client
+{
+    background: $brand;
+    padding: 150px;
+    color: $w;
+    text-align: center;
+    h3
+    {
+        font-size: 34px;
+        padding: 20px 0;
+    }
+}
+
+footer
+{
+    background-color: $g;
+    padding: 50px 0;
+    .footer-box
+    {
+        flex-basis: 22%;
+        img 
+        {
+            width: 100%;
+        }
+        &:first-child 
+        {
+            color: yellow;
+        }
+        ul 
+        {
+            list-style: none;
+            li 
+            {
+                color: $w;
+                line-height: 45px;
+                border-bottom: 1px solid $brand;
+                span 
+                {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+.copyright
+{
+    background: $brand;
+    padding: 10px 0;
+    color: $w;
+}
+
+.fi 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    box-shadow: 0px 3px 10px -6px rgba($color: #000000, $alpha: 0.1);
+}
+
+.cc .owl-nav
+{
+    top: -20px;
+    right: 20px;
+    position: absolute;
+    font-size: 22px;
+}
+.arrow
+{
+    width: 45px; height: 45px; background: $g; 
+    text-align: center; line-height: 45px; position: fixed;
+    bottom: 0; right: 20px; box-shadow: 0px 0px 4px #ccc;
+    display: none;
+    a 
+    {
+        color: $w; 
+    }
+    
+}
+.ee 
+    {
+        display: block;
+    }
+.mb{ display: none; color: $w; font-size: 32px;}
+
+
+.spinner {
+    margin: 300px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    
+    
+    -webkit-animation: sk-rotate 2.0s infinite linear;
+    animation: sk-rotate 2.0s infinite linear;
+  }
+  
+  .dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color:$g;
+    border-radius: 100%;
+    
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  @-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+  @keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
+
+@media(max-width: 500px)
+{
+    .flex{ flex-direction: column;}
+    nav ul, .ph, .email{ display: none;}
+    .container{ padding:15px;}
+    .trip { .flex{flex-direction: row; }}
+    .client{ padding: 20px; h3{ font-size: 22px;}}
+    .mb{ display: block; position: fixed; top: 50px; z-index: 999; left: 20px;}
+    nav { padding: 0; ul { li { display: block; width: 100%;}}}
+}
